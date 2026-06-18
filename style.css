@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #151515;
+    color: white;
+}
+
+.header-home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(21, 21, 21, 0.864)), url('assets/imgs/banner.jpg');
+    background-size: cover;
+    background-position: top center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+nav img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e23636;
+}
+
+/*estlização do header das páginas sobre e contato */
+.header-simples {
+    /* padding: 2 2%; */
+    background-color: #0a0a0a;
+    border-bottom: 3px solid #e23636;
+    position: sticky;                       /*mantem a header/nav aparecendo no topo ao rolar o conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;                         /*Mantém a header/nav por cima do conteúdo*/ 
+}
+
+.header-home h1 {
+    font-size: 4rem;     /*usar rem ao inves de px na font size pois os tamanhos são mais responsivos e acessíveis*/
+    font-weight: 900;   /* tag font weight - usada para alterar grossura da fonte*/
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    transform: skewX(-10deg); /* Efeito inclinado estilo logo Marvel. Tag transform possui varias animações*/
+}
+
+.header-home h2 {
+    font-size: 1.5rem;
+    color: #cccccc;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-home button {
+    background-color: #e23636;
+    color: white;
+    border: 3px solid #e23636;
+    box-shadow: 0 5px 15px rgba(226, 54, 54, 0.4);
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.header-home button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 5px 15px rgba(226, 54, 54, 0.4);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+section h1 {                          /*Titulo página sobre*/
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #e23636;
+    display: inline-block;                     /*deixa a linha do tamanho do título*/
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #cccccc;
+    margin-bottom: 15px;
+    max-width: 800px;
+}
+
+/* Iframe da página sobre */
+.section-iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-iframe h2 {
+    border: none;
+    margin-top: 30px;
+}
+
+iframe {
+    Width: min(100%, 700px);            
+    min-width: 320px;        
+    height: 420px;           
+    margin-top: 20px;       
+    border: 3px solid #e23636;
+    border-radius: 10px;    
+    box-shadow: 0px 0px 10px 8px rgba(226, 54, 54, 0.4);
+}
+
+section ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    color: #cccccc;
+}
+
+section ul li::before {         /*before - usado para adicionar um símbolo antes de cada item da lista*/
+    content: "➢";
+    position: absolute;
+    left: 0;
+    color: #e23636;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #202020;
+    border: solid 2px #e23636;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 4px 5px 5px 4px rgba(226, 54, 54, 0.4); 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #333;
+}
+
+.card h3 {
+    padding: 20px 20px 10px 20px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.card p {
+    padding: 0 20px 20px 20px;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+/* estilização página contato */
+
+.section-contato {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.section-contato h1 {
+    font-size: 2rem;
+}
+
+.section-contato p {
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #202020; 
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #e23636;  
+    max-width: 500px;
+    margin: 0 auto; 
+    width: 100%; 
+    box-shadow: 0px 0px 10px 8px rgba(226, 54, 54, 0.4);;
+}
+
+form label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #151515; 
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 5px; 
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #e23636; 
+}
+
+form button {
+    width: 100%;
+    background-color: #e23636;
+    color: white;
+    box-shadow: 0 5px 15px rgba(226, 54, 54, 0.4);
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #e23636;
+    box-shadow: 0 5px 15px rgba(226, 54, 54, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0a0a0a;
+    color: #cccccc;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 2px solid #202020;
+}
